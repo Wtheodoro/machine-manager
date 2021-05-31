@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
-import Login from "./pages/Login";
+import { AuthProvider } from "./hooks/auth";
+import Routes from "./routes";
 import { store } from './store'
 
 function App() {
@@ -7,9 +8,11 @@ function App() {
 
   return (
     <div className="App">
-      <Provider store={store}>
-      <Login />
-      </Provider>
+      <AuthProvider>
+        <Provider store={store}>
+          <Routes />
+        </Provider>
+      </AuthProvider> 
     </div>
   );
 }
