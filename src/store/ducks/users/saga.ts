@@ -1,10 +1,10 @@
 import { put, call } from 'redux-saga/effects'
 import {
-  loadGetUsersRequest, loadGetUsersSuccess, loadGetUsersFailure,
-  loadDeleteUserRequest, loadDeleteUserSuccess, loadDeleteUserFailure
+  loadGetUsersSuccess, loadGetUsersFailure,
+  loadDeleteUserFailure
 } from './actions'
 import userService from '../../../services/user-service'
-import  { UserType, UserData } from './types'
+import  { UserData } from './types'
 
 // GET
 export function* getUsers() {

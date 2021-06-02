@@ -1,6 +1,6 @@
 import { all, takeLatest } from "redux-saga/effects";
 import { UsersEnumType } from './users/types'
-import { getUsers, deleteUsers } from './users/saga'
+import { getUsers } from './users/saga'
 
 export default function* rootSaga(): any {
     return yield all([
