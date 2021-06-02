@@ -1,8 +1,12 @@
 import React from 'react';
+import { Container } from './styles'
+
 
 const Logo: React.FC = () => {
   return (
-    <h1>Mac<span>Manager</span></h1>
+    <Container>
+      <img src="/images/logo-transparent.png" alt="Mac manager logo" />
+    </Container>
   )
 }
 

@@ -22,7 +22,7 @@ export const LeftSide = styled.div`
   height: 35rem;
   background-color: #FFF;
   border-radius: 20px 0 0 20px;
-  padding: 3rem;
+  padding: 0 3rem;
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -56,6 +56,12 @@ export const LeftSide = styled.div`
     > button {
       margin-top: 2rem;
     }
+  }
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: 768px) {
