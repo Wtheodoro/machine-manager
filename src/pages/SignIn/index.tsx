@@ -24,8 +24,7 @@ const SignIm: React.FC = () => {
         <Logo />
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2>
-            Faça login para <span>Gerenciar</span><br/>
-             o <span>Todo</span>
+            Faça login para <span>Gerenciar</span>.<br/>
           </h2>
 
           <label htmlFor="email">Email</label>
