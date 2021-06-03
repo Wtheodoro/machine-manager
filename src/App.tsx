@@ -1,4 +1,5 @@
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./hooks/auth";
 import Routes from "./routes";
 import { store } from './store'
@@ -11,7 +12,9 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Provider store={store}>
-          <Routes />
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
           <GlobalStyles />
         </Provider>
       </AuthProvider> 
