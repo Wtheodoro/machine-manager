@@ -1,5 +1,5 @@
 import React from 'react';
-import InputSearch from '../InputSearch';
+import InputSearch from '../Inputs/InputSearch';
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai'
 import { Container } from './styles';
 import MediaMatch from '../MediaMatch';

@@ -3,7 +3,7 @@ import * as S from './styles';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useAuth } from '../../hooks/auth'
 import Logo from '../../components/Logo';
-import InputText from '../../components/InputText';
+import InputText from '../../components/Inputs/InputText';
 import Button from '../../components/Button';
 import RotatingText from '../../components/RoratingText';
 
