@@ -11,12 +11,12 @@ const MainHeader: React.FC = () => {
       <MediaMatch hideOnMobile>
         <div className="icons">
           <div>
-            <a href="https://www.linkedin.com/in/walisonteodoro/" target="_blank">
+            <a href="https://www.linkedin.com/in/walisonteodoro/" target="_blank" rel="noreferrer">
               <AiFillLinkedin />
             </a>
           </div>
           <div>
-            <a href="https://github.com/Wtheodoro" target="_blank">
+            <a href="https://github.com/Wtheodoro" target="_blank" rel="noreferrer">
               <AiOutlineGithub />
             </a>
           </div>
