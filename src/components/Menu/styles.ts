@@ -1,42 +1,45 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+// Desktop Menu
+export const ColumnMenu = styled.div`
+  grid-area: Menu;
   height: 90vh;
-  width: 18rem;
-  padding: 1rem 0;
+  width: 16rem;
   border-radius: 15px;
-  background-color: lightcoral;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-shadow: 0 14px 28px -30px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.18);
 
   a {
     text-decoration: none;
     color: #4F4F4F;
   }
 
-  .selected {
-    color: #000;
-  }
-
   span,
   strong {
     color: blue;
   }
+
+  h3 {
+    margin-top: 2rem;
+  }
 `;
 
 export const UserInfo = styled.div`
-  display: inherit;
-  flex-direction: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 
   > img {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+    margin-bottom: 1rem;
   }
 
   > p {
@@ -44,21 +47,35 @@ export const UserInfo = styled.div`
     line-height: 24px;
   }
 `
-export const Navigation = styled.nav`
-  margin-top: 4rem;
+
+// Mobile Menu
+
+interface FullMenuProps {
+  isOpen: boolean
+}
+export const FullMenu = styled.div<FullMenuProps>`
   display: flex;
-  flex-direction: column;
-
-  a + a {
-    margin-top: 2rem;
-  }
-
-  svg {
-    margin-right: 1rem;
-  }
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+    opacity: ${props => props.isOpen ? 1 : 0};
+    pointer-events: ${props => props.isOpen ? 'all' : 'none'};
 `
 
-export const SignOutWrapper = styled.div`
+export const CloseMenuWrapper = styled.div`
   position: absolute;
-  bottom: 2rem  ;
+  top: 1rem;
+  right: 1rem;
+
+  svg {
+    font-size: 1.5rem;
+  }
 `

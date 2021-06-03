@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./hooks/auth";
+import { MobileMenuProvider } from "./hooks/mobileMenuToggle";
 import Routes from "./routes";
 import { store } from './store'
 import GlobalStyles from "./styles/GlobalStyles";
@@ -13,7 +14,9 @@ function App() {
       <AuthProvider>
         <Provider store={store}>
           <BrowserRouter>
-            <Routes />
+            <MobileMenuProvider>
+              <Routes />
+            </MobileMenuProvider>
           </BrowserRouter>
           <GlobalStyles />
         </Provider>

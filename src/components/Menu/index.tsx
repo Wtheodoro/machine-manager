@@ -1,47 +1,47 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FaChartPie, FaTools, FaBuilding, FaUserAlt } from 'react-icons/fa'
-import { RiBuilding3Fill } from 'react-icons/ri'
-import { GoSignOut } from 'react-icons/go'
 import * as S from './styles';
+import MediaMatch from '../MediaMatch';
+import MenuNav from '../MenuNav';
+import { useMobileMenu } from '../../hooks/mobileMenuToggle';
+import { AiOutlineClose } from 'react-icons/ai'
 
 const Menu: React.FC = () => {
+  const { isOpen, closeMenu } = useMobileMenu()
+
   return (
-    <S.Container>
-      <h3>Mac<span>Manager</span></h3>
-      <S.UserInfo>
-        <img src="https://github.com/Wtheodoro/my_team_page/blob/main/img/photo4.png?raw=true" alt="Foto da Helen" />
-        <p>
-          Wellcome back,<br/>
-          <strong>Helen Brown</strong>
-        </p>
-      </S.UserInfo>
+    <>
+      <MediaMatch hideOnMobile>
+        <S.ColumnMenu className="main-menu">
+          <h3>Mac<span>Manager</span></h3>
+          <S.UserInfo>
+            <img src="https://github.com/Wtheodoro/my_team_page/blob/main/img/photo4.png?raw=true" alt="Foto da Helen" />
+            <p>
+              Wellcome back,<br/>
+              <strong>Helen Brown</strong>
+            </p>
+          </S.UserInfo>
 
-      <S.Navigation>
-        <NavLink to="/" activeClassName="selected">
-          <FaChartPie /> Dashboard
-        </NavLink>
-        <NavLink to="/" activeClassName="selected">
-          <FaTools /> Assets
-        </NavLink>
-        <NavLink to="/" activeClassName="selected">
-          <RiBuilding3Fill /> Units
-        </NavLink>
-        <NavLink to="/" activeClassName="selected">
-          <FaBuilding /> Companies
-        </NavLink>
-        <NavLink to="/" activeClassName="selected">
-          <FaUserAlt /> Users
-        </NavLink>
-      </S.Navigation>
+          <MenuNav />
+        </S.ColumnMenu>
+      </MediaMatch>
 
-      <S.SignOutWrapper>
-        <NavLink to="/" activeClassName="selected">
-          <GoSignOut /> Sign-out
-        </NavLink>
-      </S.SignOutWrapper>
+      <MediaMatch hideOnDesktop>
+        <S.FullMenu aria-hidden={!isOpen} isOpen={isOpen}>
+          <S.UserInfo>
+            <img src="https://github.com/Wtheodoro/my_team_page/blob/main/img/photo4.png?raw=true" alt="Foto da Helen" />
+            <p>
+              Wellcome back,<br/>
+              <strong>Helen Brown</strong>
+            </p>
+          </S.UserInfo>
 
-    </S.Container>
+          <S.CloseMenuWrapper>
+            <AiOutlineClose onClick={closeMenu}/>
+          </S.CloseMenuWrapper>
+          <MenuNav />        
+        </S.FullMenu>
+      </MediaMatch>
+    </>
   )
 }
 
