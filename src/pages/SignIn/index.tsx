@@ -16,7 +16,7 @@ const SignIm: React.FC = () => {
   const { signIn } = useAuth()
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit: SubmitHandler<Inputs> = data => signIn(data.email, data.password);
-  const rotatingItems = ['Tenha o controle', 'Monitore suas máquinas', 'Evite falhas', 'Anule o tempo de inatividade', 'Monitore de forma online', 'Sua equipe com o melhor desempenho']
+  const rotatingItems = ['Have control', 'Monitor your machines', 'Avoid failures', 'Avoid downtime', 'Manages online', 'Your team with the best performance']
 
   return (
     <S.Container>
@@ -24,16 +24,17 @@ const SignIm: React.FC = () => {
         <Logo />
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2>
-            Faça login para <span>Gerenciar</span>.<br/>
+            Sign in for <br/>
+            <span>Manage</span>.
           </h2>
 
           <label htmlFor="email">Email</label>
           <InputText name="email" type="email" register={register} required/>
-          {errors.email && <span>Verifique o email</span>}
+          {errors.email && <span>check your email</span>}
           
-          <label htmlFor="password">Senha</label>
+          <label htmlFor="password">Password</label>
           <InputText name="password" type="password" register={register} required/>
-          {errors.password && <span>Verifique a senha</span>}
+          {errors.password && <span>check your password</span>}
           
           <Button>Log In</Button>
         </form>

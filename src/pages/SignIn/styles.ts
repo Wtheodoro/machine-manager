@@ -33,8 +33,9 @@ export const LeftSide = styled.div`
   }
 
   h2 {
-    font-weight: 500;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
 
     > span {
       color: blue;
@@ -46,7 +47,7 @@ export const LeftSide = styled.div`
     flex-direction: column;
 
     > label {
-      margin: 1rem 0;
+      margin: 1rem 0 0.5rem;
     }
 
     > span {
