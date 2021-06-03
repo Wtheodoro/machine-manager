@@ -9,7 +9,7 @@ interface IMobileMenuContext {
 const MobileMenuContext = createContext<IMobileMenuContext>({} as IMobileMenuContext)
 
 const MobileMenuProvider: React.FC = ({ children }) => {
-    const [isOpen, setIsOpen] = useState<boolean>(true)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const openMenu = () => {
         setIsOpen(true)
