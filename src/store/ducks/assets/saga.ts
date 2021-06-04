@@ -10,7 +10,6 @@ import  { UserData } from './types'
 export function* getAssets() {
   try {
     const response: UserData = yield call(assetsService.getAssets)
-    console.log('saga', response)
     yield put(loadGetAssetsSuccess(response.data))
   } catch (error) {
     console.log(error)

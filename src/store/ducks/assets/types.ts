@@ -22,7 +22,7 @@ export interface AssetType {
   healthscore: number
   name: string
   image: string
-  especifications: {
+  specifications: {
     maxTemp?: number
     power?: number
     rpm?: number

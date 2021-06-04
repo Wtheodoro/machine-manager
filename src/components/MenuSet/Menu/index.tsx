@@ -1,8 +1,8 @@
 import React from 'react';
 import * as S from './styles';
-import MediaMatch from '../MediaMatch';
+import MediaMatch from '../../MediaMatch';
 import MenuNav from '../MenuNav';
-import { useMobileMenu } from '../../hooks/mobileMenuToggle';
+import { useMobileMenu } from '../../../hooks/mobileMenuToggle';
 import { AiOutlineClose } from 'react-icons/ai'
 
 const Menu: React.FC = () => {

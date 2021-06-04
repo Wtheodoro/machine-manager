@@ -3,8 +3,8 @@ import { FaChartPie, FaTools, FaBuilding, FaUserAlt } from 'react-icons/fa';
 import { GoSignOut } from 'react-icons/go';
 import { RiBuilding3Fill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../hooks/auth';
-import { useMobileMenu } from '../../hooks/mobileMenuToggle';
+import { useAuth } from '../../../hooks/auth';
+import { useMobileMenu } from '../../../hooks/mobileMenuToggle';
 import * as S from './styles';
 
 const MenuNav: React.FC = () => {

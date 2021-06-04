@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import AssetCard from '../../components/Cards/AssetCard';
+import Heading from '../../components/Heading';
 import { loadGetAssetsRequest } from '../../store/ducks/assets/actions';
+import { AssetType } from '../../store/ducks/assets/types';
 
 import { Container } from './styles';
 
 const Assets: React.FC = () => {
   const dispatch = useDispatch()
   const assetsGlobalState = useSelector((state: any) => state.reducerAssets.assets)
-  const [assets, setAssets] = useState<any>()
+  const [assets, setAssets] = useState<AssetType[]>()
 
   useEffect(() => {
     if (assetsGlobalState.length === 0) {
       dispatch(loadGetAssetsRequest())
-      console.log("não tinha")
     } else {
       setAssets(assetsGlobalState)
     }
-  }, [assetsGlobalState])
-
+  }, [assetsGlobalState, dispatch])
 
   return <Container>
-    <h1>hi from assets</h1>
+    <Heading>Assets</Heading>
     {
-      assets &&
-      <>
-      <p>{assets.length}</p>
-      <p>test</p>
-      </>
+      assets?.map((asset: AssetType) => (
+        <AssetCard key={asset.id} {...asset}/>
+      ))
     }
   </Container>
 }
