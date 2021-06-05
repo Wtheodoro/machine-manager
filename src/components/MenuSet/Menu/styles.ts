@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Desktop Menu
 export const ColumnMenu = styled.div`
   grid-area: Menu;
-  height: 90vh;
+  height: 93vh;
   width: 16rem;
   border-radius: 15px;
   background-color: #FFF;
@@ -70,7 +70,7 @@ export const FullMenu = styled.div<FullMenuProps>`
     transition: opacity 0.3s ease-in-out;
     opacity: ${props => props.isOpen ? 1 : 0};
     pointer-events: ${props => props.isOpen ? 'all' : 'none'};
-    z-index: 1;
+    z-index: 1; 
 `
 
 export const CloseMenuWrapper = styled.div`
