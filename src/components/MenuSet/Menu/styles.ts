@@ -12,6 +12,7 @@ export const ColumnMenu = styled.div`
   align-items: center;
   position: relative;
   box-shadow: 0 14px 28px -30px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.18);
+  z-index: 1;
 
   a {
     text-decoration: none;
@@ -53,6 +54,7 @@ export const UserInfo = styled.div`
 interface FullMenuProps {
   isOpen: boolean
 }
+
 export const FullMenu = styled.div<FullMenuProps>`
   display: flex;
     flex-direction: column;
@@ -68,6 +70,7 @@ export const FullMenu = styled.div<FullMenuProps>`
     transition: opacity 0.3s ease-in-out;
     opacity: ${props => props.isOpen ? 1 : 0};
     pointer-events: ${props => props.isOpen ? 'all' : 'none'};
+    z-index: 1;
 `
 
 export const CloseMenuWrapper = styled.div`

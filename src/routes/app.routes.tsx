@@ -11,7 +11,7 @@ import Users from '../pages/Users'
 const AppRoutes: React.FC = () => {
   return (
     <Layout>
-      <AnimatePresence >
+      <AnimatePresence>
         <Switch>
             <Route path='/' exact component={Dashboard} />
             <Route path='/assets' exact component={Assets} />
