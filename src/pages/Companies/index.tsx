@@ -1,18 +1,20 @@
-import { ReactNode } from 'react';
+import React from 'react';
+import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
 
 import { Container } from './styles';
 
-interface CompaniesProps {
-  children: ReactNode;
-}
-
-function Companies({ children }: CompaniesProps) {
+const Companies: React.FC = () => {
   return (
-    <Container>
-      <h1>Companies</h1>
-      {children}
+    <Container
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <h1>hi from Companies</h1>
     </Container>
-  );
-};
+  )
+}
 
 export default Companies;

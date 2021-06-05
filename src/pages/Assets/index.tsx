@@ -4,7 +4,7 @@ import AssetCard from '../../components/Cards/AssetCard';
 import Heading from '../../components/Heading';
 import { loadGetAssetsRequest } from '../../store/ducks/assets/actions';
 import { AssetType } from '../../store/ducks/assets/types';
-
+import { pageTransition, pageVariants, pageStyle } from '../../assets/framerMotionAnimation'
 import { Container } from './styles';
 
 const Assets: React.FC = () => {
@@ -20,14 +20,22 @@ const Assets: React.FC = () => {
     }
   }, [assetsGlobalState, dispatch])
 
-  return <Container>
-    <Heading>Assets</Heading>
-    {
-      assets?.map((asset: AssetType) => (
-        <AssetCard key={asset.id} {...asset}/>
-      ))
-    }
-  </Container>
+  return (
+    <Container
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <Heading>Assets</Heading>
+      {
+        assets?.map((asset: AssetType) => (
+          <AssetCard key={asset.id} {...asset}/>
+        ))
+      }
+    </Container>
+  )
 }
 
 export default Assets;

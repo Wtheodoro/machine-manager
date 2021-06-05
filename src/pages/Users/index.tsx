@@ -1,18 +1,20 @@
-import { ReactNode } from 'react';
+import React from 'react';
+import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
 
 import { Container } from './styles';
 
-interface UsersProps {
-  children: ReactNode;
-}
-
-function Users({ children }: UsersProps) {
+const Users: React.FC = () => {
   return (
-    <Container>
-      <h1>Users</h1>
-      {children}
+    <Container
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <h1>hi from units</h1>
     </Container>
-  );
-};
+  )
+}
 
 export default Users;

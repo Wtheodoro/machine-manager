@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: cal(100vh - 6rem);
   overflow-y: scroll;
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
         width: 10px;
     }
     ::-webkit-scrollbar-thumb {
@@ -16,5 +16,5 @@ export const Container = styled.div`
     ::-webkit-scrollbar-track {
         background-color: green;
         border-radius: 10px;
-    }
+    } */
 `;

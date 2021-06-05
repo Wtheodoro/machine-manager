@@ -1,18 +1,20 @@
-import { ReactNode } from 'react';
+import React from 'react';
+import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
 
 import { Container } from './styles';
 
-interface UnitsProps {
-  children: ReactNode;
-}
-
-function Units({ children }: UnitsProps) {
+const Units: React.FC = () => {
   return (
-    <Container>
-      <h1>Units</h1>
-      {children}
+    <Container
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <h1>Hi from units</h1>
     </Container>
-  );
-};
+  )
+}
 
 export default Units;
