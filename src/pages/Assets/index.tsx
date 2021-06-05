@@ -4,12 +4,13 @@ import AssetCard from '../../components/Cards/AssetCard';
 import Heading from '../../components/Heading';
 import { loadGetAssetsRequest } from '../../store/ducks/assets/actions';
 import { AssetType } from '../../store/ducks/assets/types';
-import { pageTransition, pageVariants, pageStyle } from '../../assets/framerMotionAnimation'
+import { pageTransition, pageVariants } from '../../assets/framerMotionAnimation'
 import { Container } from './styles';
+import reducerTypes from '../../store/ducks/reducerTypes';
 
 const Assets: React.FC = () => {
   const dispatch = useDispatch()
-  const assetsGlobalState = useSelector((state: any) => state.reducerAssets.assets)
+  const assetsGlobalState = useSelector((state: reducerTypes) => state.reducerAssets.assets)
   const [assets, setAssets] = useState<AssetType[]>()
 
   useEffect(() => {

@@ -20,7 +20,7 @@ export function* getUsers() {
 // DELETE
 export function* deleteUsers(id: number) {
   try {
-    yield call(userService.deleteUsers, id)
+    yield call(userService.deleteUser, id)
     console.log("try delete")
     // yield put(loadDeleteUserSuccess(id))
   } catch (error) {

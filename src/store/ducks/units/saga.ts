@@ -7,7 +7,7 @@ import userService from '../../../services/units-service'
 import  { UnitData } from './types'
 
 // GET
-export function* getUsers() {
+export function* getUnits() {
   try {
     const response: UnitData = yield call(userService.getUnits)
     yield put(loadGetUnitsSuccess(response.data))
@@ -18,7 +18,7 @@ export function* getUsers() {
 }
 
 // DELETE
-export function* deleteUsers(id: number) {
+export function* deleteUnit(id: number) {
   try {
     yield call(userService.deleteUnit, id)
     console.log("try delete")

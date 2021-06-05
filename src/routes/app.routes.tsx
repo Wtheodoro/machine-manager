@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Layout from '../components/Layout'
 import Assets from '../pages/Assets'
@@ -9,8 +9,6 @@ import Units from '../pages/Units'
 import Users from '../pages/Users'
 
 const AppRoutes: React.FC = () => {
-  const location = useLocation()    
-
   return (
     <Layout>
       <AnimatePresence >
