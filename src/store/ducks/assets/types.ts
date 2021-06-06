@@ -34,6 +34,7 @@ export interface AssetType {
   }
   unitId: number
   companyId: number
+  responsible?: string
 }
 
 export interface UserData {
