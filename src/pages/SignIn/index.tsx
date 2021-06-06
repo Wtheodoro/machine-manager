@@ -16,7 +16,7 @@ const SignIm: React.FC = () => {
   const { signIn } = useAuth()
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit: SubmitHandler<Inputs> = data => signIn(data.email, data.password);
-  const rotatingItems = ['Have control', 'Monitor your machines', 'Avoid failures', 'Avoid downtime', 'Manages online', 'Your team with the best performance']
+  const rotatingItems = ['Reduce maintenance costs by up to 60%', 'Increase the uptime of your machines by up to 50%', 'Reduce the number of unexpected breaks by up to 55%', 'Have control', 'Monitor your machines', 'Avoid failures', 'Avoid downtime', 'Manages online', 'Your team with the best performance']
 
   return (
     <S.Container>
