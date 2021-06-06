@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   grid-area: Content;
-  padding: 1.6rem;
+  padding: 0.5rem;
   height: cal(100vh - 6rem);
   overflow-y: scroll;
 

@@ -1,22 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 30rem;
-  
-  background-color: lightsalmon;
-  border: 5px solid red;
-`;
+  width: 27rem;
+  `;
 
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid red;
-  padding: 0.5rem;
+  border-bottom: 1px solid #C0C0C0;
 `
 
 export const Info = styled.div`
-  margin: 0.5rem 1rem 1rem 1.5rem;
+  margin: 0.5rem;
   display: flex;
   align-items: center;
 `
