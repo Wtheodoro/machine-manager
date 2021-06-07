@@ -8,7 +8,7 @@ import { pageTransition, pageVariants } from '../../assets/framerMotionAnimation
 import * as S from './styles';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import Board from '../../components/Board';
-import Chart from '../../components/Charts/Chart'
+import BarChart from '../../components/Charts/BarChart'
 import MediaMatch from '../../components/MediaMatch';
 
 interface StatusCounter {
@@ -71,9 +71,9 @@ const Assets: React.FC = () => {
           }
         </div>
 
-        <MediaMatch hideOnMobile>
+        <MediaMatch>
           <Board>
-            <Chart />
+            <BarChart />
           </Board>
         </MediaMatch>
         

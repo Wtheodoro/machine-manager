@@ -50,7 +50,6 @@ const AssetCard: React.FC<AssetType> = ({ image, model, name,  sensors, status, 
           <p><strong>Responsile:</strong> {responsible ? responsible : 'none'}</p>
         </S.InfoWrapper>
       </S.Info>
-      
     </S.Container>
   )
 }

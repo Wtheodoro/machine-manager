@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
-import Chart from '../../components/Charts/Chart';
+import UserCard from '../../components/Cards/UserCard';
+import Chart from '../../components/Charts/BarChart';
+import Heading from '../../components/Heading';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import { loadGetUsersRequest } from '../../store/ducks/users/actions';
 import { UserType } from '../../store/ducks/users/types';
@@ -29,14 +31,12 @@ const Users: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>hi from users</h1>
-
+      <Heading>Users</Heading>
       {
-        users &&
-        <p>{users.length}</p>
+        users?.map((user: UserType) => (
+          <UserCard key={user.id} {...user}/>
+        ))
       }
-
-      <Chart />
     </Container>
   )
 }

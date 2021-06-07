@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
+import CompanieCard from '../../components/Cards/CompanieCard';
+import Heading from '../../components/Heading';
 import { loadGetCompaniesRequest } from '../../store/ducks/companies/actions';
 import { CompanieType } from '../../store/ducks/companies/types';
 import reducerTypes from '../../store/ducks/reducerTypes';
-
 import { Container } from './styles';
 
 const Companies: React.FC = () => {
@@ -27,10 +28,11 @@ const Companies: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>hi from Companies</h1>
+      <Heading>Companies</Heading>
       {
-        companies &&
-        <p>{companies.length}</p>
+        companies?.map((companie: CompanieType) => (
+          <CompanieCard key={companie.id} {...companie}/>
+        ))
       }
     </Container>
   )

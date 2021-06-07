@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
+import UnitCard from '../../components/Cards/UnitCard';
+import Heading from '../../components/Heading';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import { loadGetUnitsRequest } from '../../store/ducks/units/actions';
 import { UnitType } from '../../store/ducks/units/types';
@@ -28,11 +30,11 @@ const Units: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>Hi from units</h1>
-
+      <Heading>Units</Heading>
       {
-        units &&
-        <p>{units.length}</p>
+        units?.map((unit: UnitType) => (
+          <UnitCard key={unit.id} {...unit}/>
+        ))
       }
     </Container>
   )
