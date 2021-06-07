@@ -38,7 +38,7 @@ export const LeftSide = styled.div`
     margin-bottom: 1.2rem;
 
     > span {
-      color: blue;
+      color: #1C528B;
     }
   }
 
@@ -62,6 +62,17 @@ export const LeftSide = styled.div`
   > div {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  > a {
+    color: #1C528B;
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -97,6 +108,5 @@ export const RotatingWrapper = styled.div`
   
   > span {
     font-size: 2rem;
-    /* color: blue; */
   }
 `

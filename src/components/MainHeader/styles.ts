@@ -21,29 +21,6 @@ export const Container = styled.div`
     transform: translate(-50%, -50%);
   }
 
-  .icons {
-    display: flex;
-    margin-right: 4rem;
-
-    > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background-color: #FFF;
-
-      svg {
-        font-size: 1.5rem;
-      }
-    }
-
-    > div + div {
-      margin-left: 1rem;
-    }
-  }
-
   @media (max-width: 768px) {
     .inputSearch {
       left: 45%;

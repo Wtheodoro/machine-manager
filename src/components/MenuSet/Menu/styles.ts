@@ -21,7 +21,7 @@ export const ColumnMenu = styled.div`
 
   span,
   strong {
-    color: blue;
+    color: #1C528B;
   }
 
   h3 {
@@ -46,6 +46,10 @@ export const UserInfo = styled.div`
   > p {
     text-align: center;
     line-height: 24px;
+  }
+
+  strong {
+    color: #1C528B;
   }
 `
 

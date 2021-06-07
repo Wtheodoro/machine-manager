@@ -36,7 +36,12 @@ const SignIm: React.FC = () => {
           <InputText name="password" type="password" register={register} required/>
           {errors.password && <span>check your password</span>}
           
-          <Button>Log In</Button>
+          <div className="buttons">
+            <Button>Log In</Button>
+            <a href="https://github.com/Wtheodoro/machine-manager" target="_blank" rel="noreferrer">
+              Forgot Password?
+            </a>
+          </div>
         </form>
       </S.LeftSide>
       

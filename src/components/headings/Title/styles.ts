@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const Container = styled.h1`
-  color: blue;
+  color: #1C528B;
 `;

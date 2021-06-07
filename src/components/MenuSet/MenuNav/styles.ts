@@ -19,7 +19,8 @@ export const Navigation = styled.nav`
   }
 
   .selected {
-    color: #000;
+    color: #1C528B;
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {

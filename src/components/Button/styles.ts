@@ -23,11 +23,12 @@ const containerModifiers = {
 
 export const Container = styled.button<ContainerProps>`
   ${({ fullWidth, hasIcon }) => css`
+    width: 12rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    background: blue;
+    background: #1C528B;
     color: #FFF;
     border: none;
     cursor: pointer;
