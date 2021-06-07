@@ -17,7 +17,10 @@ export const Content = styled.div`
 
   > div {
     margin-top: 1rem;
-    width: 100%;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .little-cards {
