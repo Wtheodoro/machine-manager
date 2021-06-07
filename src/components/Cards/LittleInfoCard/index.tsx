@@ -1,13 +1,13 @@
 import React from 'react';
 import * as S from './styles';
 
-interface LittleInfoCard {
+interface LittleInfoCardProps {
   icon: React.ReactNode
   title: string
   value: string | number
 }
 
-const LittleInfoCard: React.FC<LittleInfoCard> = ({ icon, title, value}) => {
+const LittleInfoCard: React.FC<LittleInfoCardProps> = ({ icon, title, value}) => {
   return (
     <S.Container>
       <S.IconWrapper>

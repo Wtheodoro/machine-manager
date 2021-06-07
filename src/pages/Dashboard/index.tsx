@@ -6,7 +6,12 @@ import ProgressBar from '../../components/dashboardComponents/ProgressBar';
 
 import {GrTechnology} from 'react-icons/gr'
 
-import { Container } from './styles';
+import { Container, Content } from './styles';
+import Title from '../../components/headings/Title';
+import LatestUpdates from '../../components/dashboardComponents/LatestUpdates';
+import TheCrew from '../../components/dashboardComponents/TheCrew';
+import Disclosure from '../../components/dashboardComponents/Disclosure';
+import DashBoardCard from '../../components/Cards/DashBoardCard';
 
 const Dashboard: React.FC = () => {
   return (
@@ -17,13 +22,23 @@ const Dashboard: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>Hi from dashboard</h1>
+      <Title>Dashboard</Title>
 
-      <SemiCircleChart />
-
-      <ProgressBar title="Reduced maintenance costs" goal={24000.00} current={17000.00} unit="R$"/>
-
-      <LittleInfoCard icon={<GrTechnology/>} title="New assets" value="+ 2"/>
+      <Content>
+        <DashBoardCard />
+        <SemiCircleChart />
+        <div>
+          <ProgressBar title="Reduced maintenance costs" goal={24000.00} current={17000.00} unit="R$"/>
+          <div className="little-cards">
+            <LittleInfoCard icon={<GrTechnology/>} title="New assets" value="+ 2"/>
+            <LittleInfoCard icon={<GrTechnology/>} title="New assets" value="+ 2"/>
+          </div>
+        </div>
+        <TheCrew />
+        <LatestUpdates />
+        <Disclosure />
+      </Content>
+      
     </Container>
   )
 }

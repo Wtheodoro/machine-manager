@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
 import UnitCard from '../../components/Cards/UnitCard';
-import Heading from '../../components/Heading';
+import Title from '../../components/headings/Title';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import { loadGetUnitsRequest } from '../../store/ducks/units/actions';
 import { UnitType } from '../../store/ducks/units/types';
@@ -30,7 +30,7 @@ const Units: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <Heading>Units</Heading>
+      <Title>Units</Title>
       {
         units?.map((unit: UnitType) => (
           <UnitCard key={unit.id} {...unit}/>

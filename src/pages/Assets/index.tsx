@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AssetCard from '../../components/Cards/AssetCard';
-import Heading from '../../components/Heading';
+import Title from '../../components/headings/Title';
 import { loadGetAssetsRequest } from '../../store/ducks/assets/actions';
 import { AssetType } from '../../store/ducks/assets/types';
 import { pageTransition, pageVariants } from '../../assets/framerMotionAnimation'
@@ -32,6 +32,8 @@ const Assets: React.FC = () => {
     }
   }, [ assetsGlobalState, dispatch ])
 
+  console.log(statusCounter)
+
   const statusCnt = (assets: AssetType[]) => {
     let inAlert = 0, inOperation = 0, inDowntime = 0
 
@@ -60,7 +62,7 @@ const Assets: React.FC = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <Heading>Assets</Heading>
+      <Title>Assets</Title>
 
       <S.Content>
         <div className="cards">

@@ -1,7 +1,8 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import React from 'react';
-import { Container } from './styles';
+import SubTitle from '../../headings/SubTitle';
+import * as S from './styles';
 
 const SemiCircleChart: React.FC = () => {
 
@@ -70,9 +71,19 @@ const SemiCircleChart: React.FC = () => {
 
 
   return (
-    <Container>
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </Container>
+    <S.Container>
+      <SubTitle>Assets Statistics</SubTitle>
+
+      <div>
+        <HighchartsReact highcharts={Highcharts} options={options} />
+        <S.Info>
+          <h2>Status</h2>
+          <p>2 In Operation</p>
+          <p>5 In Alert</p>
+          <p>3 In Downtime</p>
+        </S.Info>
+      </div>
+    </S.Container>
   )
 }
 
