@@ -8,7 +8,8 @@ import { pageTransition, pageVariants } from '../../assets/framerMotionAnimation
 import * as S from './styles';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import Board from '../../components/Board';
-import Chart from '../../components/Chart'
+import Chart from '../../components/Charts/Chart'
+import MediaMatch from '../../components/MediaMatch';
 
 interface StatusCounter {
   inAlert: number
@@ -34,13 +35,13 @@ const Assets: React.FC = () => {
   const statusCnt = (assets: AssetType[]) => {
     let inAlert = 0, inOperation = 0, inDowntime = 0
 
-    assets?.map((asset: AssetType) => {
+    assets?.forEach((asset: AssetType) => {
       if (asset.status === 'inAlert') {
-        inAlert++
+        return inAlert++
       } else if (asset.status === 'inOperation') {
-        inOperation++
+        return inOperation++
       } else if (asset.status === 'inDowntime') {
-        inDowntime++
+        return inDowntime++
       }
     })
 
@@ -70,12 +71,12 @@ const Assets: React.FC = () => {
           }
         </div>
 
-        <Board>
-          <p>{statusCounter?.inAlert}x</p>
-          <p>{statusCounter?.inOperation}</p>
-          <p>{statusCounter?.inDowntime}</p>
-          <Chart />
-        </Board>
+        <MediaMatch hideOnMobile>
+          <Board>
+            <Chart />
+          </Board>
+        </MediaMatch>
+        
       </S.Content>
     </S.Container>
   )

@@ -25,4 +25,12 @@ export const Content = styled.div`
     position: sticky;
     top: 0;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    .board {
+      position: initial;
+    }
+  }
 `;

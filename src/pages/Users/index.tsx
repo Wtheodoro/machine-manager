@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pageVariants, pageTransition } from '../../assets/framerMotionAnimation';
+import Chart from '../../components/Charts/Chart';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import { loadGetUsersRequest } from '../../store/ducks/users/actions';
 import { UserType } from '../../store/ducks/users/types';
@@ -34,6 +35,8 @@ const Users: React.FC = () => {
         users &&
         <p>{users.length}</p>
       }
+
+      <Chart />
     </Container>
   )
 }

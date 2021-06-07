@@ -7,13 +7,21 @@ drilldown(Highcharts);
 
 const options = {
   chart: {
-    type: 'column'
+    type: 'column',
+    // width: 400,
+    // height: 200
   },
   title: {
-    text: 'Dashboard'
+    text: 'Status'
   },
   xAxis: {
     type: 'category'
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: ''
+    }
   },
   legend: {
     enabled: false
@@ -56,7 +64,7 @@ const options = {
         data: [['Motor H13D', 1], ['Ventilador serie D', 1]]
       }
     ]
-  }
+  },
 };
 
 const Chart: React.FC = () => (
