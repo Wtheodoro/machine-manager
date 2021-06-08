@@ -8,8 +8,8 @@ const CompanieCard: React.FC<CompanieType> = ({ id, name }) => {
     <S.Container>
       <BsBuilding />
       <S.InfoWrapper>
-        <p><strong>Name:</strong> {name}</p>
         <p><strong>ID:</strong> {id}</p>
+        <p><strong>Name:</strong> {name}</p>
       </S.InfoWrapper>
     </S.Container>
   )
