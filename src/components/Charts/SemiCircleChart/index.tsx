@@ -52,8 +52,8 @@ const SemiCircleChart: React.FC = () => {
         name: '',
         innerSize: '80%',
         data: [
-          { name: 'In Alert', y: 5, color: '#18d217' },
-          { name: 'In Operation', y: 3, color: '#FFC035' },
+          { name: 'In Operation', y: 3, color: '#18d217' },
+          { name: 'In Alert', y: 5, color: '#FFC035' },
           { name: 'In Downtime', y: 2, color: '#ff3440' },
         ]
       }
@@ -78,9 +78,9 @@ const SemiCircleChart: React.FC = () => {
         <HighchartsReact highcharts={Highcharts} options={options} />
         <S.Info>
           <h2>Status</h2>
-          <p>2 In Operation</p>
+          <p>3 In Operation</p>
           <p>5 In Alert</p>
-          <p>3 In Downtime</p>
+          <p>2 In Downtime</p>
         </S.Info>
       </div>
     </S.Container>

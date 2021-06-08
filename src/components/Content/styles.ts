@@ -10,17 +10,4 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-
-
-  /* ::-webkit-scrollbar {
-        width: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background-color: blue;
-        border-radius: 10px;
-    }
-    ::-webkit-scrollbar-track {
-        background-color: green;
-        border-radius: 10px;
-    } */
 `;

@@ -11,27 +11,23 @@ const TheCrew: React.FC = () => {
 
       <S.TrackWrapper>
         <S.Track>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-2q9hYyXRQvfUXS9tr7MSgKFIC6QvLKNww&usqp=CAU" alt="elon Musk" />
-          <p><strong>Elon</strong></p>
-          <p>Musk</p>
+          <img src="/images/GriffRichards.jpeg" alt="Griff Richards" />
+          <p><strong>Griff</strong><br/>Richards</p>
         </S.Track>
 
         <S.Track>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-2q9hYyXRQvfUXS9tr7MSgKFIC6QvLKNww&usqp=CAU" alt="elon Musk" />
-          <p><strong>Elon</strong></p>
-          <p>Musk</p>
+          <img src="/images/SaraCabrera.jpeg" alt="Sara Cabrera" />
+          <p><strong>Sara</strong><br/>Cabrera</p>
         </S.Track>
 
         <S.Track>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-2q9hYyXRQvfUXS9tr7MSgKFIC6QvLKNww&usqp=CAU" alt="elon Musk" />
-          <p><strong>Elon</strong></p>
-          <p>Musk</p>
+          <img src="/images/ShaeLe.jpeg" alt="Shae Le" />
+          <p><strong>Shae</strong><br/>Le</p>
         </S.Track>
 
         <S.Track>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-2q9hYyXRQvfUXS9tr7MSgKFIC6QvLKNww&usqp=CAU" alt="elon Musk" />
-          <p><strong>Elon</strong></p>
-          <p>Musk</p>
+          <img src="/images/BillMahoney.jpeg" alt="Bill Mahoney" />
+          <p><strong>Bill</strong><br/>Mahoney</p>
         </S.Track>
       </S.TrackWrapper>
       

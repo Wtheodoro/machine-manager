@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export const Container = styled(motion.div)`
   height: 100%;
   width: 100%;
-
+  
   @media (max-width: 768px) {
     padding: 1rem;
   }
@@ -26,7 +26,11 @@ export const Content = styled.div`
   .little-cards {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+
+    > div {
+      margin-top: 1rem;
+    }
   }
 `;

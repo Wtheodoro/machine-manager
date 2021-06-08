@@ -54,7 +54,6 @@ export const UserInfo = styled.div`
 `
 
 // Mobile Menu
-
 interface FullMenuProps {
   isOpen: boolean
 }

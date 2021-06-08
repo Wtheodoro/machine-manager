@@ -19,6 +19,7 @@ export const Track = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   p {
     margin-top: 1rem;
@@ -37,6 +38,6 @@ export const Track = styled.div`
 
 export const TrackWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 `
