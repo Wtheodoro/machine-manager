@@ -20,11 +20,11 @@ const MenuNav: React.FC = () => {
         <NavLink to="/assets" activeClassName="selected" onClick={closeMenu}>
           <FaTools /> Assets
         </NavLink>
-        <NavLink to="/units" activeClassName="selected" onClick={closeMenu}>
-          <RiBuilding3Fill /> Units
-        </NavLink>
         <NavLink to="/companies" activeClassName="selected" onClick={closeMenu}>
           <FaBuilding /> Companies
+        </NavLink>
+        <NavLink to="/units" activeClassName="selected" onClick={closeMenu}>
+          <RiBuilding3Fill /> Units
         </NavLink>
         <NavLink to="/users" activeClassName="selected" onClick={closeMenu}>
           <FaUserAlt /> Users

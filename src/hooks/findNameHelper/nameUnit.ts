@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CompanieType } from '../../store/ducks/companies/types';
 import reducerTypes from '../../store/ducks/reducerTypes';

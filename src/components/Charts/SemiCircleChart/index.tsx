@@ -4,7 +4,13 @@ import React from 'react';
 import SubTitle from '../../headings/SubTitle';
 import * as S from './styles';
 
-const SemiCircleChart: React.FC = () => {
+export interface SemiCircleProps {
+  inAlert?: number
+  inOperation?: number
+  inDowntime?: number
+}
+
+const SemiCircleChart: React.FC<SemiCircleProps> = ({ inDowntime, inAlert, inOperation }) => {
 
   const options = {
     chart: {
@@ -53,9 +59,9 @@ const SemiCircleChart: React.FC = () => {
         name: '',
         innerSize: '80%',
         data: [
-          { name: 'In Operation', y: 3, color: '#18d217' },
-          { name: 'In Alert', y: 5, color: '#FFC035' },
-          { name: 'In Downtime', y: 2, color: '#ff3440' },
+          { name: 'In Operation', y: inOperation, color: '#18D217' },
+          { name: 'In Alert', y: inAlert, color: '#FFC035' },
+          { name: 'In Downtime', y: inDowntime, color: '#FF3440' },
         ]
       }
     ],
@@ -79,9 +85,9 @@ const SemiCircleChart: React.FC = () => {
         <HighchartsReact highcharts={Highcharts} options={options} />
         <S.Info>
           <h2>Status</h2>
-          <p>3 In Operation</p>
-          <p>5 In Alert</p>
-          <p>2 In Downtime</p>
+          <S.P className="operation" color="#18d217">{inOperation} In Operation</S.P>
+          <S.P className="alert" color="#FFC035">{inAlert} In Alert</S.P>
+          <S.P className="downtime" color="#FF3440">{inDowntime} In Downtime</S.P>
         </S.Info>
       </div>
     </S.Container>

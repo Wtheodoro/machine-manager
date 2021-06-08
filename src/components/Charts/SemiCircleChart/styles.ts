@@ -20,3 +20,22 @@ export const Info = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
+
+interface PProps {
+  color: string
+}
+
+export const P = styled.p<PProps>`
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    content: '';
+    width: 2rem;
+    height: 3px;
+    background-color: ${props => props.color};
+  }
+
+`

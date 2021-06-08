@@ -9,7 +9,7 @@ import * as S from './styles';
 import reducerTypes from '../../store/ducks/reducerTypes';
 import Board from '../../components/Board';
 import BarChart from '../../components/Charts/BarChart'
-import MediaMatch from '../../components/MediaMatch';
+import statusCnt from '../../hooks/assetStatusCounter';
 
 interface StatusCounter {
   inAlert: number
@@ -32,28 +32,6 @@ const Assets: React.FC = () => {
     }
   }, [ assetsGlobalState, dispatch ])
 
-  console.log(statusCounter)
-
-  const statusCnt = (assets: AssetType[]) => {
-    let inAlert = 0, inOperation = 0, inDowntime = 0
-
-    assets?.forEach((asset: AssetType) => {
-      if (asset.status === 'inAlert') {
-        return inAlert++
-      } else if (asset.status === 'inOperation') {
-        return inOperation++
-      } else if (asset.status === 'inDowntime') {
-        return inDowntime++
-      }
-    })
-
-    return {
-      inAlert,
-      inOperation,
-      inDowntime
-    }
-  }
-
   return (
     <S.Container
       initial="initial"
@@ -74,7 +52,7 @@ const Assets: React.FC = () => {
         </div>
 
         <Board>
-          <BarChart />
+          <BarChart {...statusCounter}/>
         </Board>
       </S.Content>
     </S.Container>

@@ -9,7 +9,13 @@ interface ChartSize {
   width: number | string
   height: number | string
 }
-const BarChart: React.FC = () => {
+
+interface BarChartProps {
+  inAlert?: number
+  inOperation?: number
+  inDowntime?: number
+}
+const BarChart: React.FC<BarChartProps> = ({ inDowntime = 0, inAlert = 0, inOperation = 0}) => {
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth)
   const [chartSize, setChartSize] = useState<ChartSize>()
 
@@ -58,17 +64,17 @@ const BarChart: React.FC = () => {
         data: [
           {
             name: 'Alert',
-            y: 5,
+            y: inAlert,
             drilldown: 'inAlert'
           },
           {
             name: 'Operating',
-            y: 3,
+            y: inOperation,
             drilldown: 'inOperation'
           },
           {
             name: 'Downtime',
-            y: 2,
+            y: inDowntime,
             drilldown: 'inDowntime'
           }
         ]
