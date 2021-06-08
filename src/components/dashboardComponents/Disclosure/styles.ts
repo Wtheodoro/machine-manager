@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* width: 30rem; */
-  width: 45%;
+  width: 40%;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -17,6 +16,7 @@ export const TitleWrapper = styled.div`
 export const CardWrapper = styled.div`
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 `
