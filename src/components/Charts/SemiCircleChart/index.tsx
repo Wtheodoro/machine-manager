@@ -12,7 +12,8 @@ const SemiCircleChart: React.FC = () => {
       height: 200,
       plotBackgroundColor: null,
       plotBorderWidth: 0,
-      plotShadow: false
+      plotShadow: false,
+      backgroundColor: '#F9F9F9'
     },
     title: {
       text: '',

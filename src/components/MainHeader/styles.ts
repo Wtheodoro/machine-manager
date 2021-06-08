@@ -30,7 +30,7 @@ export const Container = styled.div`
       margin-right: 1rem;
 
       svg {
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #FFF;
       }
     }
