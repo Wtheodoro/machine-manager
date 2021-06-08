@@ -4,6 +4,7 @@ import LittleInfoCard from '../../components/Cards/LittleInfoCard';
 import SemiCircleChart from '../../components/Charts/SemiCircleChart';
 import ProgressBar from '../../components/dashboardComponents/ProgressBar';
 import {GrTechnology} from 'react-icons/gr'
+import { FaUserAstronaut } from 'react-icons/fa'
 import { Container, Content } from './styles';
 import Title from '../../components/headings/Title';
 import LatestUpdates from '../../components/dashboardComponents/LatestUpdates';
@@ -43,7 +44,7 @@ const Dashboard: React.FC = () => {
         <div>
           <ProgressBar title="Reduced maintenance costs" goal={24000.00} current={13500.00} unit="R$"/>
           <div className="little-cards">
-            <LittleInfoCard icon={<GrTechnology/>} title="New assets" value="+ 2"/>
+            <LittleInfoCard icon={<FaUserAstronaut/>} title="Contributors" value="+ 3"/>
             <LittleInfoCard icon={<GrTechnology/>} title="New assets" value="+ 2"/>
           </div>
         </div>
