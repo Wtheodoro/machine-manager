@@ -27,9 +27,16 @@ export const Container = styled.div`
     }
 
     .menu-icon {
-      margin-right: 1rem;
+      height: 6rem;
+      width: 5rem;
+      position: relative;
+      background: linear-gradient(to right, transparent, black);
 
       svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 2rem;
         color: #FFF;
       }
