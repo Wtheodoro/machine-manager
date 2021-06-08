@@ -73,12 +73,9 @@ const Assets: React.FC = () => {
           }
         </div>
 
-        <MediaMatch>
-          <Board>
-            <BarChart />
-          </Board>
-        </MediaMatch>
-        
+        <Board>
+          <BarChart />
+        </Board>
       </S.Content>
     </S.Container>
   )

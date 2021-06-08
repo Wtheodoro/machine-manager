@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  width: 8rem;
+  width: 7rem;
   height: 9rem;
   border-radius: 20px;
   background-color: ${props => props.color ? props.color : '#000'};
@@ -27,12 +27,12 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Title = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `
 
 export const Social = styled.div`  
   > svg {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
   }
 `

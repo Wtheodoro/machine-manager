@@ -17,6 +17,7 @@ export const Content = styled.div`
 
   > div {
     margin-top: 1rem;
+    width: 45%;
     
     @media (max-width: 768px) {
       width: 100%;

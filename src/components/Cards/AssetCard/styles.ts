@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 27rem;
+  width: 46%;
+  min-width: 22rem;
   `;
 
 export const Top = styled.div`
@@ -12,21 +13,21 @@ export const Top = styled.div`
 `
 
 export const Info = styled.div`
-  margin: 0.5rem;
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
 `
 
 export const ImageWrapper = styled.div`
   img {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
   }
 `
 export const InfoWrapper = styled.div`
-  margin-left: 2rem;
+  margin-left: 1rem;
 
   p {
-    line-height: 1.7rem;
+    line-height: 1.5rem;
   }
 `

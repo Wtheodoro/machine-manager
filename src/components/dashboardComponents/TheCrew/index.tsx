@@ -6,7 +6,7 @@ const TheCrew: React.FC = () => {
   return (
     <S.Container>
       <S.TitleWrapper>
-        <SubTitle>The Crew</SubTitle>
+        <SubTitle>New Join Members</SubTitle>
       </S.TitleWrapper>
 
       <S.TrackWrapper>
